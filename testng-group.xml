@@ -1,0 +1,9 @@
+<groups>
+
+    <run>
+
+        <include name="Smoke"/>
+
+    </run>
+
+</groups>
