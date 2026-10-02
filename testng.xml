@@ -2,17 +2,21 @@
 
 <suite name="Payroll Automation Suite">
 
-    <test name="Expense Voucher Test">
-		
-		<parameter name="browser"
+  <parameter name="browser"
                    value="chrome"/>
+                   
+       <listeners>
+		   <listener
+		   class-name="listners.TestListener"/>
+	   </listeners>
+ <test name="Run Package">
+        <packages>
 
-        <classes>
+            <package name="test"/>
 
-            <class name="test.TC276"/>
-            
-        </classes>
+        </packages>
 
     </test>
+
 
 </suite>
