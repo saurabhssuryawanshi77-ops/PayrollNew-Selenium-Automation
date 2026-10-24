@@ -11,7 +11,7 @@ public class Login {
 	 
 	WebDriver driver;
 	
-	 Logger log= LogManager.getLogger(Login.class);
+	
 	 public Login(WebDriver driver) {
 		
 		this.driver = driver;
@@ -24,12 +24,12 @@ public class Login {
 		//login page1
 		login1.Enterloginid("uid");
 		login1.clicknext();
-		log.info("1st Login page ok");
+		
 		
 		//Login page2
 		login2.enterPassword("password");
 		login2.clickLogin();
-		log.info("2nd login age ok");
+		
 	}
 	
 	

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Date;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 
 import org.apache.commons.io.FileUtils;
@@ -24,13 +24,15 @@ public class Screenshotutil {
 		TakesScreenshot ts= (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		
-		String timestamp= new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date(0));
+		String timestamp= new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 		
-		File destination= new File("Screenshots"+ filename + "_"+ timestamp +".png");
+		File folder= new File("Screenshots");
+		
+		File destination= new File(folder+ filename + "_"+ timestamp +".png");
 		
 		try {
 			FileUtils.copyFile(source, destination);
-			System.out.println("File saved-"+destination.getAbsolutePath());
+			System.out.println("Screenshot saved-"+destination.getAbsolutePath());
 		}
 		catch(IOException e) {
 			e.printStackTrace();

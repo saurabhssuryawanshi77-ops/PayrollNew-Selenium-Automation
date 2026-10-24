@@ -54,7 +54,7 @@ public class TestListener implements ITestListener {
 		Screenshotutil screenshot=new Screenshotutil(BaseTest.getDriver());
 		screenshot.captureScreenshot(result.getName());
 		
-		log.info(result.getName()
+		log.error(result.getName()
 		        + "Test Failed");
 	}
 	
