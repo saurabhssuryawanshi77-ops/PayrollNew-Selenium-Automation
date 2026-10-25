@@ -15,6 +15,8 @@ public class BasePage {
 		this.driver=driver;
 	}
 	   Actions ac =new Actions(driver);
-		  Alert a= driver.switchTo().alert();
+		 
+		  
+		  
 		  
 }
